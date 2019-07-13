@@ -1,0 +1,41 @@
+<div class="container">
+    <!-- Content here -->
+ 
+<div style="padding-left: 70px; padding-right:70px" class="border border-success">
+<h2>Add employee..</h2>
+<form  #empForm="ngForm" (ngSubmit)="addEmployee()">
+    <div class="form-group">
+      <label for="name">Enter Employee Id:-</label>
+      <input type="text" class="form-control"  name="EId" id="id" [(ngModel)]="empId" #idcontrol="ngModel"  aria-describedby="emailHelp" placeholder="Enter Employee Id" required>
+      <small id="idHelp" class="form-text text-muted" *ngIf="idcontrol.touched && idcontrol.invalid">*Employee Id Required.</small>
+    </div>
+    <div class="form-group">
+      <label for="name">Enter Employee Name:-</label>
+      <input type="text" class="form-control"  placeholder="Employee Name" name="EName" id="name" [(ngModel)]="empName" #namecontrol="ngModel" required>
+      <small id="namelHelp" class="form-text text-muted" *ngIf="namecontrol.touched && namecontrol.invalid">*Employee Name Required.</small>
+    </div>
+    <div class="form-group">
+        <label for="name">Enter Employee Salary:-</label>
+        <input type="text" class="form-control"  placeholder="Employee Salary" name="ESalary" id="salary" [(ngModel)]="empSalary" #salarycontrol="ngModel" required>
+        <small id="namelHelp" class="form-text text-muted" *ngIf="salarycontrol.touched && salarycontrol.invalid">*Employee Salary Required.</small>
+      </div>
+      <div class="form-group">
+        <label for="name">Enter Employee Department:-</label>
+        <input type="text" class="form-control"  placeholder="Employee Department" name="EDepartment" id="department" [(ngModel)]="empDepartment" #departmentcontrol="ngModel" required>
+        <small id="namelHelp" class="form-text text-muted" *ngIf="departmentcontrol.touched && departmentcontrol.invalid">*Employee Department Required.</small>
+      </div>
+    
+    <button  type="submit" value="Add Data" [disabled]="empForm.invalid" class="btn btn-success">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button  type="reset" value="Clear"  class="btn btn-success">Clear</button>
+  </form>
+</div>
+</div>
+
+  
+   
+
+ 
+
+   
+    
+    
